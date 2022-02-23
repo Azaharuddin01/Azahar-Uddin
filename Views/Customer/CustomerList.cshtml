@@ -1,0 +1,17 @@
+﻿@model IEnumerable<Azahar_Uddin.Models.Customer>
+@{
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+    </tr>
+    @foreach (var itemss in Model)
+    {
+        <tr>
+            <td><a asp-action="CustomerList" asp-controller="Customer" asp-route-id="@itemss-id">@itemss.Name</a></td>
+            <td>@itemss.Email_Id</td>
+        </tr>
+    }
+</table>
